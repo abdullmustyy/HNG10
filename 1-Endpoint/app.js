@@ -18,8 +18,9 @@ app.get("/", (req, res) => {
 
   // GitHub file and repo URLs
   const githubFileUrl =
-    "https://github.com/username/repo/blob/main/file_name.ext";
-  const githubRepoUrl = "https://github.com/username/repo";
+    "https://github.com/abdullmustyy/HNG10/blob/main/1-Endpoint/app.js";
+  const githubRepoUrl =
+    "https://github.com/abdullmustyy/HNG10/tree/main/1-Endpoint";
 
   // Status code
   const statusCode = 200;
