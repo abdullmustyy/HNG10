@@ -2,7 +2,7 @@ import express from "express";
 
 const app = express();
 
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
   // Get query parameters from the request
   const slackName = req.query.slack_name;
   const track = req.query.track;
