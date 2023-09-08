@@ -18,9 +18,9 @@ app.get("/api", (req, res) => {
 
   // GitHub file and repo URLs
   const githubFileUrl =
-    "https://github.com/abdullmustyy/HNG10/blob/main/1-Endpoint/app.js";
+    "https://github.com/abdullmustyy/HNGx/blob/main/1-Endpoint/app.js";
   const githubRepoUrl =
-    "https://github.com/abdullmustyy/HNG10/tree/main/1-Endpoint";
+    "https://github.com/abdullmustyy/HNGx/tree/main/1-Endpoint";
 
   // Status code
   const statusCode = 200;
