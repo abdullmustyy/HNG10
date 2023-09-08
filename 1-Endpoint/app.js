@@ -7,14 +7,16 @@ app.get("/api", (req, res) => {
   const slackName = req.query.slack_name;
   const track = req.query.track;
 
+  const date = new Date();
+
   // Get the current day of the week
-  const currentDay = new Date().toLocaleDateString("en-US", {
+  const currentDay = date.toLocaleDateString("en-US", {
     weekday: "long",
   });
 
   // Get the current UTC time
-  const now = new Date();
-  const currentUtcTime = now.toISOString();
+  const currentUtcTime = date.toISOString();
+  const utcTime = currentUtcTime.slice(0, -5) + "Z";
 
   // GitHub file and repo URLs
   const githubFileUrl =
@@ -29,7 +31,7 @@ app.get("/api", (req, res) => {
   const response = {
     slack_name: slackName,
     current_day: currentDay,
-    utc_time: currentUtcTime,
+    utc_time: utcTime,
     track: track,
     github_file_url: githubFileUrl,
     github_repo_url: githubRepoUrl,
