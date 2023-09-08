@@ -1,2 +1,2 @@
-# HNG10
-Tasks from HNG10
+# HNGx
+Tasks from HNGx
