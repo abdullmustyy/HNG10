@@ -44,7 +44,7 @@ To have HNGxCRUD running locally follow these steps.
    npm install
    ```
 
-4. Create a .env file in the project's root folder (2-CRUD/.env) and set the MONGODB_URI variable
+4. Create a .env file in the project's root folder (2-CRUD/.env) and set the `MONGODB_URI` variable
 
    ```sh
    MONGODB_URI=mongodb+srv://abdullmustyy:6zJoBUDeqergdpfJ@hngxcrudcluster.ygmnfrl.mongodb.net/HNGxCRUD?retryWrites=true&w=majority
