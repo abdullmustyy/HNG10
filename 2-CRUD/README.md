@@ -10,13 +10,13 @@ HNGxCRUD is an API that provides endpoint that performs CRUD(Create, Read, Updat
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Follow the following instructions to have HNGxCRUD running locally
+Follow the following instructions to have HNGxCRUD running locally.
 
 ### Prerequisites
 
 To use HNGxCRUD you need to have npm installed, run the command below to install the latest version of npm.
 
-* npm
+* npm:
   
   ```sh
   npm install npm@latest -g
@@ -26,25 +26,25 @@ To use HNGxCRUD you need to have npm installed, run the command below to install
 
 To have HNGxCRUD running locally follow these steps.
 
-1. Clone the repo
+1. Clone the repo:
 
    ```sh
    git clone https://github.com/abdullmustyy/HNGx.git
    ```
 
-2. Navigate to project directory
+2. Navigate to project directory:
 
    ```sh
    cd 2-CRUD
    ```
 
-3. Install NPM packages
+3. Install NPM packages:
 
    ```sh
    npm install
    ```
 
-4. Create a .env file in the project's root folder (2-CRUD/.env) and set the `MONGODB_URI` variable
+4. Create a .env file in the project's root folder (2-CRUD/.env) and set the `MONGODB_URI` variable:
 
    ```sh
    MONGODB_URI=mongodb+srv://abdullmustyy:6zJoBUDeqergdpfJ@hngxcrudcluster.ygmnfrl.mongodb.net/HNGxCRUD?retryWrites=true&w=majority
