@@ -27,9 +27,8 @@ app.post("/api", async (req, res) => {
   const { name } = req.body;
 
   try {
-    if (typeof name !== "string") {
+    if (name && typeof name !== "string")
       return res.status(400).json({ message: "Name must be a string" });
-    }
 
     const personExists = await Person.find({ name: name });
 
