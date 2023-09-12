@@ -64,4 +64,4 @@ Follow the link below to view a UML (Unified Modeling Language) diagram that rep
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-HNGxCRUD API provides endpoints that performs CRUD(Create, Read, Update, Delete) operations on a "person" resourse. _For detailed explaination and sample examples of how it carries out the operations, please refer to the [Documentation](https://example.com)_
+HNGxCRUD API provides endpoints that performs CRUD(Create, Read, Update, Delete) operations on a "person" resourse. _For detailed explaination and sample examples of how it carries out the operations, please refer to the [Documentation](https://github.com/abdullmustyy/HNGx/blob/004765c0e71cb68cf211a0798b59e6823f154d0c/2-CRUD/DOCUMENTATION.md#endpoints)_
