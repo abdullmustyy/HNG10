@@ -1,8 +1,10 @@
 # HNGxCRUD API DOCUMENTATION
-HNGxCRUD API exposes CRUD(Create, Read, Update, Delete) endpoints that performs operations on a `Person` resourse. 
+
+HNGxCRUD API exposes CRUD(Create, Read, Update, Delete) endpoints that performs operations on a `Person` resourse.
 This documentation explains how to make requests to each endpoint, how the response from each request should be, and how to use postman to test the endpoints.
 
 ## Endpoints
+
 * `POST`: Make a POST request to the endpoint below to CREATE a `person`.
   
   ```js
@@ -26,21 +28,27 @@ This documentation explains how to make requests to each endpoint, how the respo
   ```js
   /api/:id
   ```
-> _❕Replace `:id` with the `ID` of the `PERSON` that's been queried in every endpoint where it is needed._ 
+
+> _❕Replace `:id` with the `ID` of the `PERSON` that's been queried in every endpoint where it is needed._
 
 ## Usage, Examples & Testing
+
 This section covers how to:
+
 * Make requests to HNGxCRUD API enpoints and get an expected response, with examples.
 * Use postman to test HNGxCRUD API endpoints.
   > Follow this link to checkout HNGxCRUD API workspace ↗ [HNGxCRUD API Postman Workspace](https://www.postman.com/spacecraft-meteorologist-88946703/workspace/hngx)
 
 ### `CREATE`
+
 Follow these steps to create a `person`:
+
 1. Make a `POST` request to the endpoint below.
-   
+
    ```js
    /api
    ```
+
 2. Pass the name of `person` to be created as a request body.
 
    ```json
@@ -48,6 +56,7 @@ Follow these steps to create a `person`:
     "name": "Mark Essien"
    }
    ```
+
    > _❕ `Mark Essien` can be replaced with any other name._
 3. If the `POST` request was made correctly _(as explained in previous steps)_ a response like so will be returned.
 
@@ -61,11 +70,13 @@ Follow these steps to create a `person`:
       }
    }
    ```
+
    > _❕ `Mark Essien` is the name of `person` passed as a request body so, `person` with name `Mark Essien` was `CREATED`._
 
 #### Validation
+
 There are criteria that need to be met for a `person` to be created successfully. Asides passing the name of `person` to be created as a request body,
-that name _MUST_ be of type _`string`_. 
+that name _MUST_ be of type _`string`_.
 
 * For instance, if the value of the name passed as a request body was a _`number`_:
 
@@ -74,6 +85,7 @@ that name _MUST_ be of type _`string`_.
     "name": 5
    }
    ```
+
 * A response like so will be returned:
 
    ```json
@@ -81,13 +93,16 @@ that name _MUST_ be of type _`string`_.
    +  "message": "Name must be a string"
    }
    ```
+
    > _❕This response will be returned anytime the name passed as a request body is not of type `string`_
 
 #### Testing
+
 Follow these steps to test the `CREATE` operation on [HNGxCRUD API Postman Workspace](https://www.postman.com/spacecraft-meteorologist-88946703/workspace/hngx)
+
 1. A `url` variable has been set, and it's value is HNGxCRUD API's domain:
    > _The image below illustrates this step._
-   
+
    ![2023-09-12 (2)](https://github.com/abdullmustyy/HNGx/assets/87391935/50a21af3-36f9-4bd7-9b19-8dceaba545ee)
 
 2. With the `url` value set to HNGxCRUD API's domain, send a `POST` request to `/api` endpoint:
@@ -168,7 +183,6 @@ interactive elements, using React/Vue/Svelte lib or vanilla JS.
 
 </details>
 
-
 ### JS Application and Time-based Limit
 
 File size limit (in kB) is not the best way to describe your JS application
@@ -240,7 +254,6 @@ to track the time a browser takes to compile and execute your JS.
    to add one — start with [Travis CI].
 
 </details>
-
 
 ### Big Libraries
 
@@ -336,7 +349,6 @@ the size in bytes. Libraries like [React] are good examples for this preset.
 
 </details>
 
-
 ### Small Libraries
 
 JS libraries < 10 kB in size.
@@ -423,12 +435,10 @@ for this preset.
 
 </details>
 
-
 [Travis CI]: https://github.com/dwyl/learn-travis
 [Storeon]: https://github.com/ai/storeon/
 [Nano ID]: https://github.com/ai/nanoid/
 [React]: https://github.com/facebook/react/
-
 
 ## Reports
 
@@ -455,7 +465,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 ```
-
 
 ## Config
 
@@ -493,7 +502,6 @@ Plugin presets:
 
 [`dual-publish`]: https://github.com/ai/dual-publish
 
-
 #### Third-Party Plugins
 
 Third-party plugins and presets named starting with `size-limit-` are also supported.
@@ -506,7 +514,6 @@ For example:
   above `node-esbuild` and core `file` plugins.
 * [`nx-size-limit`](https://github.com/LironHazan/nx-size-limit)
   is an [NX](https://nx.dev/community) build system community plugin.
-
 
 ### Limits Config
 
