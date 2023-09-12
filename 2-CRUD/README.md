@@ -49,6 +49,12 @@ To have HNGxCRUD running locally follow these steps.
    ```sh
    MONGODB_URI=mongodb+srv://abdullmustyy:6zJoBUDeqergdpfJ@hngxcrudcluster.ygmnfrl.mongodb.net/HNGxCRUD?retryWrites=true&w=majority
    ```
+   
+5. Start the server:
+
+   ```sh
+   npm start
+   ```
 
 ## UML Diagram
 
