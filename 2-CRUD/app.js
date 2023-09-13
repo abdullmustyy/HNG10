@@ -78,6 +78,9 @@ app.patch("/api/:id", async (req, res) => {
   let personName;
 
   try {
+    if (name && typeof name !== "string")
+      return res.status(400).json({ message: "Name must be a string" });
+
     personName = await Person.findById(id).select("name");
 
     if (!personName) {
