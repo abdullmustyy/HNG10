@@ -1,4 +1,4 @@
-<p align="center">
+<p align="center" id="top">
   <a href="#endpoints">Endpoints</a> •
   <a href="#create">CREATE</a> •
   <a href="#read">READ</a> •
@@ -49,6 +49,8 @@ This section covers how to:
   > Follow this link to checkout HNGxCRUD API workspace ↗ [HNGxCRUD API Postman Workspace](https://www.postman.com/spacecraft-meteorologist-88946703/workspace/hngx)
 
 ### `CREATE`
+
+<p align="right"><a href="#top">Back to top</a></p>
 
 Follow these steps to `create` a `person`:
 
@@ -105,7 +107,7 @@ that name _MUST_ be of type _`string`_.
 
    > _❕This response will be returned anytime the name passed as a request body is not of type `string`_
 
-#### Testing
+#### Test CREATE operation
 
 Follow these steps to test the `CREATE` operation on [HNGxCRUD API Postman Workspace](https://www.postman.com/spacecraft-meteorologist-88946703/workspace/hngx)
 
@@ -122,6 +124,8 @@ Follow these steps to test the `CREATE` operation on [HNGxCRUD API Postman Works
 
 ### `READ`
 
+<p align="right"><a href="#top">Back to top</a></p>
+
 > _❕ Copy the value set to `_id` in the response that was returned after creating a `person`. It'll be needed to perform `READ` operation._
 
 Follow these steps to `read` a `person`:
@@ -131,8 +135,9 @@ Follow these steps to `read` a `person`:
    ```js
    /api/:id
    ```
+
    > _❕ Replace `:id` with the value of `_id` that was copied earlier._
-   
+
 2. If the `GET` request was made correctly _(as explained in previous steps)_ a response like so will be returned.
 
    ```diff
@@ -148,7 +153,7 @@ Follow these steps to `read` a `person`:
 
    > _❕ The `:id` that was provided in the endpoint was that of `Mark Essien` so, `person` with name `Mark Essien` was `READ`._
 
-#### Testing
+#### Test READ operation
 
 Follow these steps to test the `READ` operation on [HNGxCRUD API Postman Workspace](https://www.postman.com/spacecraft-meteorologist-88946703/workspace/hngx)
 
@@ -165,6 +170,8 @@ Follow these steps to test the `READ` operation on [HNGxCRUD API Postman Workspa
 
 ### `UPDATE`
 
+<p align="right"><a href="#top">Back to top</a></p>
+
 > _❕ Copy the value set to `_id` in the response that was returned after creating a `person`. It'll be needed to perform `UPDATE` operation._
 
 Follow these steps to `update` a `person`:
@@ -174,6 +181,7 @@ Follow these steps to `update` a `person`:
    ```js
    /api/:id
    ```
+
    > _❕ Replace `:id` with the value of `_id` that was copied earlier._
 
 2. Pass the name of `person` to be updated as a request body.
@@ -185,7 +193,7 @@ Follow these steps to `update` a `person`:
    ```
 
    > _❕ `Mark` can be replaced with any other name._
-   
+
 3. If the `PATCH` request was made correctly _(as explained in previous steps)_ a response like so will be returned.
 
    ```diff
@@ -201,7 +209,7 @@ Follow these steps to `update` a `person`:
 
    > _❕ The `:id` that was provided in the endpoint was that of `Mark Essien`, and the name `Mark Essien` was `UPDATED` to was passed as a request body so, `person` with name `Mark Essien` was `UPDATED` to `Mark`._
 
-#### Testing
+#### Test UPDATE operation
 
 Follow this step to test the `UPDATE` operation on [HNGxCRUD API Postman Workspace](https://www.postman.com/spacecraft-meteorologist-88946703/workspace/hngx)
 
@@ -213,6 +221,8 @@ Follow this step to test the `UPDATE` operation on [HNGxCRUD API Postman Workspa
 
 ### `DELETE`
 
+<p align="right"><a href="#top">Back to top</a></p>
+
 > _❕ Copy the value set to `_id` in the response that was returned after creating a `person`. It'll be needed to perform `DELETE` operation._
 
 Follow these steps to `delete` a `person`:
@@ -222,6 +232,7 @@ Follow these steps to `delete` a `person`:
    ```js
    /api/:id
    ```
+
    > _❕ Replace `:id` with the value of `_id` that was copied earlier._
 
 2. If the `DELETE` request was made correctly _(as explained in previous steps)_ a response like so will be returned.
@@ -234,7 +245,7 @@ Follow these steps to `delete` a `person`:
 
    > _❕ The `:id` that was provided in the endpoint was that of `Mark` so, `person` with name `Mark` was `DELETED`._
 
-#### Testing
+#### Test DELETE operation
 
 Follow this step to test the `DELETE` operation on [HNGxCRUD API Postman Workspace](https://www.postman.com/spacecraft-meteorologist-88946703/workspace/hngx)
 
@@ -245,4 +256,7 @@ Follow this step to test the `DELETE` operation on [HNGxCRUD API Postman Workspa
    > _As seen in the image, `Mark` was `DELETED` since the `:id` that was provided in the endpoint was that of `Mark`, and the expected response was returned._
 
 ## Domain
+
+<p align="right"><a href="#top">Back to top</a></p>
+
 Follow this link to view HNGxCRUD API's homepage ↗ [HNGxCRUD API](https://abdulhngx-crud.onrender.com)
