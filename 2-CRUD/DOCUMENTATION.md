@@ -1,5 +1,3 @@
-# HNGxCRUD API DOCUMENTATION
-
 <p align="center">
   <a href="#endpoints">Endpoints</a> •
   <a href="#create">CREATE</a> •
@@ -8,6 +6,8 @@
   <a href="#delete">DELETE</a> •
   <a href="#domain">Domain</a>
 </p>
+
+# HNGxCRUD API DOCUMENTATION
 
 HNGxCRUD API exposes CRUD(Create, Read, Update, Delete) endpoints that performs operations on a `Person` resourse.
 This documentation explains how to make requests to each endpoint, how the response from each request should be, and how to use postman to test the endpoints.
