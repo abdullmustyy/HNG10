@@ -1,5 +1,14 @@
 # HNGxCRUD API DOCUMENTATION
 
+<p align="center">
+  <a href="#endpoints">Endpoints</a> •
+  <a href="#create">CREATE</a> •
+  <a href="#read">READ</a> •
+  <a href="#update">UPDATE</a> •
+  <a href="#delete">DELETE</a> •
+  <a href="#domain">Domain</a>
+</p>
+
 HNGxCRUD API exposes CRUD(Create, Read, Update, Delete) endpoints that performs operations on a `Person` resourse.
 This documentation explains how to make requests to each endpoint, how the response from each request should be, and how to use postman to test the endpoints.
 
@@ -236,4 +245,4 @@ Follow this step to test the `DELETE` operation on [HNGxCRUD API Postman Workspa
    > _As seen in the image, `Mark` was `DELETED` since the `:id` that was provided in the endpoint was that of `Mark`, and the expected response was returned._
 
 ## Domain
-View HNGxCRUD API's homepage ↗ [HNGxCRUD API](https://abdulhngx-crud.onrender.com)
+Follow this link to view HNGxCRUD API's homepage ↗ [HNGxCRUD API](https://abdulhngx-crud.onrender.com)
