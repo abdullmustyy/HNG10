@@ -1,27 +1,25 @@
 import express from "express";
-import { Schema, model, connect } from "mongoose";
+import { connect } from "mongoose";
 import bodyParser from "body-parser";
+import cors from "cors";
 import chalk from "chalk";
-// Environment variables
 import "dotenv/config";
+import { videoRoutes } from "./routes/video.js";
 
 const app = express();
 
-// Create video schema & model
-const videoSchema = new Schema({
-  title: {
-    type: String,
-    required: [true, "You need to provide a title"],
-  },
-  url: {
-    type: String,
-    required: [true, "You need to provide a url"],
-  },
-});
-const Video = model("Video", videoSchema);
+// View engine
+app.set("view engine", "ejs");
+// Parsers
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors());
+// Route
+app.use("/api", videoRoutes);
 
+// Home route
 app.get("/", (req, res) => {
-  res.send("<h1>Hello World!</h1>");
+  res.redirect("/api");
 });
 
 // DB connection and server
