@@ -1,6 +1,11 @@
 import { Router } from "express";
 import { upload } from "../config/multer.js";
-import { createVideo } from "../controlers/video.js";
+import {
+  createVideo,
+  deleteVideo,
+  getAllVideao,
+  getVideo,
+} from "../controlers/video.js";
 
 export const videoRoutes = Router();
 
@@ -11,3 +16,12 @@ videoRoutes.get("/", (req, res) => {
 
 // CREATE video
 videoRoutes.post("/upload", upload.array("videos"), createVideo);
+
+// READ all videos
+videoRoutes.get("/videos", getAllVideao);
+
+// READ a video
+videoRoutes.get("/videos/:videoId", getVideo);
+
+// DELETE a video
+videoRoutes.delete("/videos/:videoId", deleteVideo);
