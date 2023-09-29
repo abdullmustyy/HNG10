@@ -5,37 +5,34 @@ import fs from "fs";
 const createVideo = async (req, res) => {
   try {
     req.files.forEach(async (file) => {
-      const { path, filename } = file;
+      const { originalname } = file;
 
       // Upload video to cloudinary and save to database
-      const videoResponse = await cloudinary.uploader.upload(
-        path,
-        {
-          resource_type: "video",
-          folder: "HNGxCEVH",
-        },
-        async (error, result) => {
-          if (error) {
-            console.log("Error", error);
-            res.status(500).json({
-              message: "Error uploading video to cloudinary.",
-              error: error.message,
-            });
-          } else {
-            fs.unlinkSync(path);
-
-            const video = await Video.create({
-              name: filename,
-              url: result.secure_url,
-            });
-            res
-              .status(201)
-              .json({ message: "Video uploaded successfully.", video });
+      await cloudinary.uploader
+        .upload_stream(
+          {
+            resource_type: "video",
+            folder: "HNGxCEVH",
+          },
+          async (error, result) => {
+            if (error) {
+              console.log("Error", error);
+              res.status(500).json({
+                message: "Error uploading video to cloudinary.",
+                error: error.message,
+              });
+            } else {
+              const video = await Video.create({
+                name: originalname,
+                url: result.secure_url,
+              });
+              res
+                .status(201)
+                .json({ message: "Video uploaded successfully.", video });
+            }
           }
-        }
-      );
-
-      console.log("Video url:", videoResponse.secure_url);
+        )
+        .end(file.buffer);
     });
   } catch (error) {
     console.log("Error", error);
