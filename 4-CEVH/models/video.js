@@ -2,9 +2,9 @@ import { model, Schema } from "mongoose";
 
 const videoSchema = new Schema(
   {
-    title: {
+    name: {
       type: String,
-      required: [true, "You need to provide a title"],
+      required: [true, "You need to provide a file name"],
     },
     url: {
       type: String,

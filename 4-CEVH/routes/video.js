@@ -10,4 +10,4 @@ videoRoutes.get("/", (req, res) => {
 });
 
 // CREATE video
-videoRoutes.post("/upload", upload.single("video"), createVideo);
+videoRoutes.post("/upload", upload.array("videos"), createVideo);
