@@ -1,0 +1,3 @@
+[submodule "Fortress-events-backend"]
+	path = Fortress-events-backend
+	url = https://github.com/hngx-org/Fortress-events-backend
