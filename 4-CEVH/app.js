@@ -1,6 +1,5 @@
 import express from "express";
 import { connect } from "mongoose";
-import bodyParser from "body-parser";
 import cors from "cors";
 import chalk from "chalk";
 import "dotenv/config";
@@ -11,8 +10,8 @@ const app = express();
 // View engine
 app.set("view engine", "ejs");
 // Parsers
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 // Route
 app.use("/api", videoRoutes);
@@ -23,14 +22,14 @@ app.get("/", (req, res) => {
 });
 
 // DB connection and server
-connect(process.env.MONGODB_URI)
+const { MONGODB_URI, PORT } = process.env;
+
+connect(MONGODB_URI)
   .then(() => {
     console.log(chalk.blue("MongoDB connected"));
 
-    app.listen(process.env.PORT, () => {
-      console.log(
-        chalk.yellow.underline(`Server running on port ${process.env.PORT}`)
-      );
+    app.listen(PORT, () => {
+      console.log(chalk.yellow.underline(`Server running on port ${PORT}`));
     });
   })
   .catch((err) => {

@@ -1,11 +1,11 @@
 import { Router } from "express";
-import { upload } from "../config/multer.js";
+import { upload } from "../middleware/multer.js";
 import {
   createVideo,
   deleteVideo,
   getAllVideao,
   getVideo,
-} from "../controlers/video.js";
+} from "../controllers/video.js";
 
 export const videoRoutes = Router();
 
