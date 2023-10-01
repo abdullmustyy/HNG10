@@ -1,11 +1,13 @@
 import { Video } from "../models/video.js";
 import { generateText } from "../utils/deepgram.js";
+import path from "path";
+import { __dirname } from "../utils/dirname.js";
 
 const createVideo = async (req, res) => {
   try {
     req.files.forEach(async (file) => {
       const { filename, originalname, path } = file;
-      const uploadsServer = "https://abdulhngx-cevh.onrender.com/uploads/";
+      const uploadsServer = "https://abdulhngx-cevh.onrender.com/api/uploads/";
 
       const videoTranscription = await generateText(file);
 
@@ -50,6 +52,15 @@ const getVideo = async (req, res) => {
   }
 };
 
+const sendVideo = async (req, res) => {
+  try {
+    const { videoName } = req.params;
+    const uploadsDir = path.join(__dirname, "../uploads");
+
+    res.sendFile(path.join(uploadsDir, videoName));
+  } catch (error) {}
+};
+
 const deleteVideo = async (req, res) => {
   try {
     const { videoId } = req.params;
@@ -68,4 +79,4 @@ const deleteVideo = async (req, res) => {
   }
 };
 
-export { createVideo, getAllVideao, getVideo, deleteVideo };
+export { createVideo, getAllVideao, getVideo, deleteVideo, sendVideo };
