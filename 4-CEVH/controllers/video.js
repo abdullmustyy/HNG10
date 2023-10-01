@@ -2,12 +2,16 @@ import { Video } from "../models/video.js";
 import { generateText } from "../utils/deepgram.js";
 import path from "path";
 import { __dirname } from "../utils/dirname.js";
+import "dotenv/config";
 
 const createVideo = async (req, res) => {
   try {
     req.files.forEach(async (file) => {
       const { filename, originalname, path } = file;
-      const uploadsServer = "https://abdulhngx-cevh.onrender.com/api/uploads/";
+      const uploadsServer =
+        req.hostname === "localhost"
+          ? req.hostname + `:${process.env.PORT}` + "/api/uploads/"
+          : req.hostname + "/api/uploads/";
 
       const videoTranscription = await generateText(file);
 
