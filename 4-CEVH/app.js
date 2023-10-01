@@ -4,13 +4,18 @@ import cors from "cors";
 import chalk from "chalk";
 import "dotenv/config";
 import { videoRoutes } from "./routes/video.js";
+import fs from "fs";
 
 const app = express();
+
+if (!fs.existsSync("./uploads")) {
+  fs.mkdirSync("./uploads");
+}
 
 // View engine
 app.set("view engine", "ejs");
 // Parsers
-app.use(express.static("uploads"));
+app.use("/api/uploads", express.static("uploads"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
