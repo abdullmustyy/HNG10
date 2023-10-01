@@ -4,6 +4,10 @@ import { RecordSession } from "../models/record.js";
 
 const recordingData = {};
 
+const generateUniqueSessionID = () => {
+  return Date.now().toString();
+};
+
 const startRecording = async (req, res) => {
   try {
     const sessionID = generateUniqueSessionID();
@@ -104,10 +108,6 @@ const stopRecordingAndSaveFile = async (req, res) => {
     console.error(error);
     res.status(500).json({ error: "Failed to stop recording and save file." });
   }
-};
-
-const generateUniqueSessionID = () => {
-  return Date.now().toString();
 };
 
 const deleteFile = (filePath) => {

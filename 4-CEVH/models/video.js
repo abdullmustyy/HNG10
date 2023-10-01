@@ -12,7 +12,7 @@ const videoSchema = new Schema(
     },
     transcript: {
       type: String,
-      required: [true, "You need to provide a transcript"],
+      // required: [true, "You need to provide a transcript"],
     },
   },
   { timestamps: true }

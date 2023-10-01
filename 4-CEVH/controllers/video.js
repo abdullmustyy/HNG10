@@ -53,15 +53,6 @@ const getVideo = async (req, res) => {
   }
 };
 
-const sendVideo = async (req, res) => {
-  try {
-    const { videoName } = req.params;
-    const uploadsDir = path.join(__dirname, "../uploads");
-
-    res.sendFile(path.join(uploadsDir, videoName));
-  } catch (error) {}
-};
-
 const deleteVideo = async (req, res) => {
   try {
     const { videoId } = req.params;
@@ -80,4 +71,4 @@ const deleteVideo = async (req, res) => {
   }
 };
 
-export { createVideo, getAllVideao, getVideo, deleteVideo, sendVideo };
+export { createVideo, getAllVideao, getVideo, deleteVideo };

@@ -3,8 +3,9 @@ import { connect } from "mongoose";
 import cors from "cors";
 import chalk from "chalk";
 import "dotenv/config";
-import { videoRoutes } from "./routes/video.js";
 import fs from "fs";
+import { videoRoutes } from "./routes/video.js";
+import { recordRoutes } from "./routes/record.js";
 
 const app = express();
 
@@ -21,6 +22,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 // Route
 app.use("/api", videoRoutes);
+app.use("api", recordRoutes);
 
 // Home route
 app.get("/", (req, res) => {
