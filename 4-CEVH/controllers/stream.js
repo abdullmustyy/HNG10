@@ -135,6 +135,10 @@ const transcribeVideo = async (req, res) => {
 
     const videoTranscription = await generateText(video);
 
+    if (!videoTranscription) {
+      return res.status(500).json({ error: "Failed to transcribe video." });
+    }
+
     res.status(200).json({ videoTranscription });
   } catch (error) {
     console.error(error);
