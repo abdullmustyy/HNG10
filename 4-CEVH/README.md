@@ -3,7 +3,7 @@
   <a href="#start-stream">Start stream</a> •
   <a href="#send-stream">Send stream</a> •
   <a href="#stop-stream">Stop stream</a> •
-  <a href="#transcribe-video">Transcribe Video</a> •
+  <a href="#transcribe-video">Transcribe Video</a>
 </p>
 
 # CEVH - Chrome Extension Video Handler
