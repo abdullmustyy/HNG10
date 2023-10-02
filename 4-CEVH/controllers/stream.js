@@ -129,7 +129,7 @@ const transcribeVideo = async (req, res) => {
     const videoPath = path.join(
       __dirname,
       "../uploads",
-      `1696271088721-187860589-intro.mp4`
+      `${sessionId}-video.mp4`
     );
     const video = { mimetype: "video/mp4", path: videoPath };
 
