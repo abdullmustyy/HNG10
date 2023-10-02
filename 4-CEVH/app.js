@@ -5,7 +5,7 @@ import chalk from "chalk";
 import "dotenv/config";
 import fs from "fs";
 import { videoRoutes } from "./routes/video.js";
-import { recordRoutes } from "./routes/record.js";
+import { recordRoutes } from "./routes/stream.js";
 
 const app = express();
 
@@ -21,8 +21,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 // Route
-app.use("/api", videoRoutes);
-app.use("api", recordRoutes);
+app.use("/api", videoRoutes, recordRoutes);
 
 // Home route
 app.get("/", (req, res) => {

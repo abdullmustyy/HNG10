@@ -1,8 +1,5 @@
 import { Video } from "../models/video.js";
 import { generateText } from "../utils/deepgram.js";
-import path from "path";
-import { __dirname } from "../utils/dirname.js";
-import "dotenv/config";
 
 const createVideo = async (req, res) => {
   try {

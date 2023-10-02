@@ -56,10 +56,12 @@ export const generateText = async (video) => {
     );
 
     // Write the response to the console
-    return videoTranscription.results.channels[0].alternatives[0].transcript;
+    // console.dir(videoTranscription, { depth: null });
 
     // Write only the transcript to the console
     //console.dir(videoTranscription.results.channels[0].alternatives[0].transcript, { depth: null });
+
+    return videoTranscription.results.channels[0].alternatives[0].paragraphs;
   } catch (error) {
     console.log(error);
   }
