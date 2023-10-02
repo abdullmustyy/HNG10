@@ -16,7 +16,7 @@ if (!fs.existsSync("./uploads")) {
 // View engine
 app.set("view engine", "ejs");
 // Parsers
-app.use("/api/uploads", express.static("uploads"));
+app.use("/uploads", express.static("uploads"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());

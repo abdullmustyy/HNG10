@@ -5,7 +5,7 @@ const createVideo = async (req, res) => {
   try {
     req.files.forEach(async (file) => {
       const { filename, originalname, path } = file;
-      const uploadsServer = req.hostname + "/api/uploads/";
+      const uploadsServer = req.hostname + "/uploads/";
 
       const videoTranscription = await generateText(file);
 

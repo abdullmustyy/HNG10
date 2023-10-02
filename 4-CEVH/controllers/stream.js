@@ -64,7 +64,7 @@ const stopStream = async (req, res) => {
     }
 
     const videoName = `${sessionId}-video.mp4`;
-    const videoUrl = req.hostname + "/api/uploads/" + videoName;
+    const videoUrl = req.hostname + "/uploads/" + videoName;
 
     const video = await Video.create({
       name: videoName,
