@@ -1,3 +1,11 @@
+<p align="center" id="top">
+  <a href="#endpoints">Endpoints</a> •
+  <a href="#start-stream">Start stream</a> •
+  <a href="#send-stream">Send stream</a> •
+  <a href="#stop-stream">Stop stream</a> •
+  <a href="#transcribe-video">Transcribe Video</a> •
+</p>
+
 # CEVH - Chrome Extension Video Handler
 
 Receives a video from chrome extension, save it to database and return a URL where it can be accessed.
@@ -9,11 +17,12 @@ Receives a video from chrome extension, save it to database and return a URL whe
 
 ## Endpoints
 
-### Start stream:
+### Start stream
   
   ```js
   /api/start-stream
   ```
+
 * **Method:** POST
 * **Request:** None
 * **Response:**
@@ -24,11 +33,12 @@ Receives a video from chrome extension, save it to database and return a URL whe
   }
   ```
 
-### Send stream:
+### Send stream
   
   ```js
   /api/send-stream/:sessionId
   ```
+
 * **Method:** POST
 * **Params:** sessionId
 * **Request:**
@@ -38,6 +48,7 @@ Receives a video from chrome extension, save it to database and return a URL whe
     "videoDataChunk": "..."
   }
   ```
+
 * **Response:**
   
   ```json
@@ -46,11 +57,12 @@ Receives a video from chrome extension, save it to database and return a URL whe
   }
   ```
 
-### Stop stream:
+### Stop stream
   
   ```js
   /api/stop-stream/:sessionId
   ```
+
 * **Method:** POST
 * **Params:** sessionId
 * **Request:** None
@@ -70,11 +82,12 @@ Receives a video from chrome extension, save it to database and return a URL whe
   }
   ```
 
-### Transcribe video:
+### Transcribe Video
   
   ```js
   /api/transcribe/:sessionId
   ```
+
 * **Method:** GET
 * **Params:** sessionId
 * **Request:** None
