@@ -2,7 +2,7 @@ import { model, Schema } from "mongoose";
 
 const streamSesionSchema = new Schema(
   {
-    sessionID: {
+    sessionId: {
       type: String,
       required: true,
       unique: true,
