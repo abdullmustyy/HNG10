@@ -1,3 +1,7 @@
 [submodule "Fortress-events-backend"]
 	path = Fortress-events-backend
 	url = https://github.com/hngx-org/Fortress-events-backend
+
+[submodule "team-artemis-portfolio-api"]
+	path = team-artemis-portfolio-api
+	url = https://github.com/abdullmustyy/team-artemis-portfolio-api
